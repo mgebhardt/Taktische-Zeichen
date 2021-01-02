@@ -1,13 +1,13 @@
 # Alle Jinja2 Templates im Ordner symbols finden
-SOURCES = $(shell find symbols/ -name *.j2)
+SOURCES = $(shell find symbols/ -name *.yml)
 TEMPLATE = $(shell find symbols/ -name *.j2t)
 
 # symbols/ prefix entfernen für die Ausgabedateien
 TARGET_PATHS = $(SOURCES:symbols/%=%)
 
 # Zieldateien für SVG und PNG Ausgabe festlegen
-SVG_TARGETS = $(TARGET_PATHS:.j2=.svg)
-PNG_TARGETS = $(TARGET_PATHS:.j2=.png)
+SVG_TARGETS = $(TARGET_PATHS:.yml=.svg)
+PNG_TARGETS = $(TARGET_PATHS:.yml=.png)
 
 SVG_FILES = $(addprefix build/svg/,$(SVG_TARGETS))
 PNG_1024_FILES = $(addprefix build/png/1024/,$(PNG_TARGETS))
@@ -17,9 +17,13 @@ PNG_256_FILES = $(addprefix build/png/256/,$(PNG_TARGETS))
 # Erstellt alle SVG Ausgabedateien
 svg: $(SVG_FILES)
 
-build/svg/%.svg: symbols/%.j2 $(TEMPLATE)
+#build/svg/%.svg: symbols/%.j2 $(TEMPLATE)
+#	mkdir -p $(@D)
+#	j2 $< -o $@
+
+build/svg/%.svg: symbols/%.yml $(TEMPLATE)
 	mkdir -p $(@D)
-	j2 $< -o $@
+	j2 --customize ./scripts/j2-customize.py ./templates/Einheiten/Einheit.j2 $< -o $@
 
 # Erstellt alle PNG Ausgabedateien
 png: $(PNG_1024_FILES) $(PNG_512_FILES) $(PNG_256_FILES)
