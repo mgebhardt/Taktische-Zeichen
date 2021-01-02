@@ -29,7 +29,7 @@ jobs:
       
       # Create release on master and tag matches v*
       - name: Create GitHub release
-        if: ${{ success() && github.ref == 'refs/heads/master' }}
+        if: ${{ success() }}
         uses: Roang-zero1/github-upload-release-artifacts-action@master
         with:
           args: Taktische-Zeichen.zip
