@@ -1,0 +1,37 @@
+# Build current release and the Taktische Zeichen to the release
+
+name: Release
+
+# Controls when the action will run. 
+on: [release, workflow_dispatch]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Install tools
+      - name: Install Phantomjs, Optipng, Python3 Pip, and J2cli
+        run: |
+          sudo apt update
+          sudo apt install -y phantomjs optipng python3-pip
+          sudo pip3 install j2cli
+      # Build svg, png, and package them
+      - name: Build
+        run: make release
+      
+      # Create release on master and tag matches v*
+      - name: Create GitHub release
+        if: ${{ success() && github.ref == 'refs/heads/master' }}
+        uses: Roang-zero1/github-upload-release-artifacts-action@master
+        with:
+          args: Taktische-Zeichen.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
