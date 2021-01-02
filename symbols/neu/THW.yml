@@ -1,0 +1,356 @@
+Einheit:
+  - Name: OV Stab
+    Größenordnung: keine
+    Organisation: THW
+    FileName: OV_Stab
+    Führung: true
+  - Name: GAGr
+    Größenordnung: keine
+    Organisation: THW
+    FileName: Grundausbildungsgruppe
+  - Name: JuGr
+    Größenordnung: keine
+    Organisation: THW
+    FileName: Jugendgruppe
+  - Name: AEGr
+    Größenordnung: keine
+    Organisation: THW
+    FileName: Alters_und_Ehrengruppe
+  - Name: TZ
+    Größenordnung: Zugtrupp
+    Organisation: THW
+    FileName: Zugtrupp
+  - Name: B
+    Größenordnung: Gruppe
+    Organisation: THW
+    FileName: Bergungsgruppe
+  - Name: B
+    Größenordnung: Gruppe
+    Organisation: THW
+    Typ: ASH
+    FileName: Bergungsgruppe_ASH
+  - Name: R
+    Größenordnung: Gruppe
+    Organisation: THW
+    FileName: FGr_Räumen
+  - Name: R
+    Größenordnung: Gruppe
+    Organisation: THW
+    Typ: A
+    FileName: FGr_Räumen_A
+  - Name: R
+    Größenordnung: Gruppe
+    Organisation: THW
+    Typ: B
+    FileName: FGr_Räumen_B
+  - Name: R
+    Größenordnung: Gruppe
+    Organisation: THW
+    Typ: C
+    FileName: FGr_Räumen_C
+  - Name: W
+    Größenordnung: Gruppe
+    Organisation: THW
+    FileName: FGr_Wassergefahren
+  - Name: W
+    Größenordnung: Gruppe
+    Organisation: THW
+    Typ: A
+    FileName: FGr_Wassergefahren_A
+  - Name: W
+    Größenordnung: Gruppe
+    Organisation: THW
+    Typ: B
+    FileName: FGr_Wassergefahren_B
+  - Name: BrB
+    Größenordnung: Gruppe
+    Organisation: THW
+    FileName: FGr_Brückenbau_B
+  - Name: O
+    Größenordnung: Gruppe
+    Organisation: THW
+    FileName: FGr_Ortung
+  - Name: O
+    Größenordnung: Gruppe
+    Organisation: THW
+    Typ: A
+    FileName: FGr_Ortung_A
+  - Name: O
+    Größenordnung: Gruppe
+    Organisation: THW
+    Typ: B
+    FileName: FGr_Ortung_B
+  - Name: O
+    Größenordnung: Gruppe
+    Organisation: THW
+    Typ: C
+    FileName: FGr_Ortung_C
+  - Name: Sp
+    Größenordnung: Gruppe
+    Organisation: THW
+    FileName: FGr_Sprengen
+  - Name: N
+    Größenordnung: Gruppe
+    Organisation: THW
+    FileName: FGr_Notversorgung_und_Notinstandsetzung
+  - Name: SB
+    Größenordnung: Gruppe
+    Organisation: THW
+    FileName: FGr_Schwere_Bergung
+  - Name: SB
+    Größenordnung: Gruppe
+    Organisation: THW
+    Typ: A
+    FileName: FGr_Schwere_Bergung_A
+  - Name: SB
+    Größenordnung: Gruppe
+    Organisation: THW
+    Typ: B
+    FileName: FGr_Schwere_Bergung_B
+  - Name: ESS
+    Größenordnung: Trupp
+    Organisation: THW
+    FileName: Tr_Einsatzstellensicherung
+  - Name: MHP
+    Größenordnung: Trupp
+    Organisation: THW
+    FileName: Tr_Mobiler_Hochwasserpegel
+  - Name: UL
+    Größenordnung: Trupp
+    Organisation: THW
+    FileName: Tr_Unbemannte_Luftfahrtsysteme
+  - Name: I
+    Größenordnung: Gruppe
+    Organisation: THW
+    FileName: FGr_Infrastruktur
+  - Name: E
+    Größenordnung: Gruppe
+    Organisation: THW
+    FileName: FGr_Elektroversorgung
+  - Name: TW
+    Größenordnung: Gruppe
+    Organisation: THW
+    FileName: FGr_Trinkwasserversorgung
+  - Name: WP
+    Größenordnung: Gruppe
+    Organisation: THW
+    FileName: FGr_Wasserschaden_Pumpen
+  - Name: WP
+    Größenordnung: Gruppe
+    Organisation: THW
+    Typ: A
+    FileName: FGr_Wasserschaden_Pumpen_A
+  - Name: WP
+    Größenordnung: Gruppe
+    Organisation: THW
+    Typ: B
+    FileName: FGr_Wasserschaden_Pumpen_B
+  - Name: WP
+    Größenordnung: Gruppe
+    Organisation: THW
+    Typ: C
+    FileName: FGr_Wasserschaden_Pumpen_C
+  - Name: Öl
+    Größenordnung: Gruppe
+    Organisation: THW
+    FileName: FGr_Ölschaden
+  - Name: Öl
+    Größenordnung: Gruppe
+    Organisation: THW
+    Typ: A
+    FileName: FGr_Ölschaden_A
+  - Name: Öl
+    Größenordnung: Gruppe
+    Organisation: THW
+    Typ: B
+    FileName: FGr_Ölschaden_B
+  - Name: Öl
+    Größenordnung: Gruppe
+    Organisation: THW
+    Typ: C
+    FileName: FGr_Ölschaden_C
+  - Name: ENT
+    Größenordnung: keine
+    Organisation: THW
+    FileName: Einsatznachsorgeteam
+  - Name: FZ-Log
+    Größenordnung: Zugtrupp
+    Organisation: THW
+    FileName: Zugtrupp_Fachzug_Logistik
+  - Name: Log-MW
+    Größenordnung: Gruppe
+    Organisation: THW
+    Versorgung: true
+    FileName: FGr_Logistik_Materialwirtschaft
+  - Name: Log-M
+    Größenordnung: Trupp
+    Organisation: THW
+    Versorgung: true
+    FileName: Tr_Logistik_Materialerhaltung
+  - Name: Log-VG
+    Größenordnung: Trupp
+    Organisation: THW
+    Versorgung: true
+    FileName: Tr_Logistik_Verbrauchsgüterversorgung
+  - Name: Log-V
+    Größenordnung: Gruppe
+    Organisation: THW
+    Versorgung: true
+    FileName: FGr_Logistik_Verpflegung
+  - Name: TS
+    Größenordnung: Trupp
+    Organisation: THW
+    Versorgung: true
+    FileName: Tr_Schwerer_Transport
+  - Name: FK
+    Größenordnung: Gruppe
+    Organisation: THW
+    Führung: true
+    FileName: FGr_Führung_Kommunikation
+  - Name: Fü
+    Größenordnung: Trupp
+    Organisation: THW
+    Führung: true
+    FileName: Führungstrupp
+  - Name: FüKom
+    Größenordnung: Trupp
+    Organisation: THW
+    Führung: true
+    FileName: Führungs_Kommunikationstrupp
+  - Name: Fm
+    Größenordnung: Trupp
+    Organisation: THW
+    FileName: Fernmeldetrupp
+  - Name: WV
+    Größenordnung: Trupp
+    Organisation: THW
+    Führung: true
+    FileName: Weitverkehrstrupp
+  - Name: TZ-R
+    Größenordnung: Zug
+    Organisation: THW
+    FileName: TZ_mit_FGr_Räumen
+  - Name: TZ-R
+    Größenordnung: Zug
+    Organisation: THW
+    Typ: A
+    FileName: TZ_mit_FGr_Räumen_A
+  - Name: TZ-R
+    Größenordnung: Zug
+    Organisation: THW
+    Typ: B
+    FileName: TZ_mit_FGr_Räumen_B
+  - Name: TZ-R
+    Größenordnung: Zug
+    Organisation: THW
+    Typ: C
+    FileName: TZ_mit_FGr_Räumen_C
+  - Name: TZ-W
+    Größenordnung: Zug
+    Organisation: THW
+    FileName: TZ_mit_FGr_Wassergefahren
+  - Name: TZ-W
+    Größenordnung: Zug
+    Organisation: THW
+    Typ: A
+    FileName: TZ_mit_FGr_Wassergefahren_A
+  - Name: TZ-W
+    Größenordnung: Zug
+    Organisation: THW
+    Typ: B
+    FileName: TZ_mit_FGr_Wassergefahren_B
+  - Name: TZ-BrB
+    Größenordnung: Zug
+    Organisation: THW
+    FileName: TZ_mit_FGr_Brückenbau_B
+  - Name: TZ-O
+    Größenordnung: Zug
+    Organisation: THW
+    FileName: TZ_mit_FGr_Ortung
+  - Name: TZ-O
+    Größenordnung: Zug
+    Organisation: THW
+    Typ: A
+    FileName: TZ_mit_FGr_Ortung_A
+  - Name: TZ-O
+    Größenordnung: Zug
+    Organisation: THW
+    Typ: B
+    FileName: TZ_mit_FGr_Ortung_B
+  - Name: TZ-O
+    Größenordnung: Zug
+    Organisation: THW
+    Typ: C
+    FileName: TZ_mit_FGr_Ortung_C
+  - Name: TZ-Sp
+    Größenordnung: Zug
+    Organisation: THW
+    FileName: TZ_mit_FGr_Sprengen
+  - Name: TZ-N
+    Größenordnung: Zug
+    Organisation: THW
+    FileName: TZ_mit_FGr_Notversorgung_und_Notinstandsetzung
+  - Name: TZ-SB
+    Größenordnung: Zug
+    Organisation: THW
+    FileName: TZ_mit_FGr_Schwere_Bergung
+  - Name: TZ-SB
+    Größenordnung: Zug
+    Organisation: THW
+    Typ: A
+    FileName: TZ_mit_FGr_Schwere_Bergung_A
+  - Name: TZ-SB
+    Größenordnung: Zug
+    Organisation: THW
+    Typ: B
+    FileName: TZ_mit_FGr_Schwere_Bergung_B
+  - Name: TZ-I
+    Größenordnung: Zug
+    Organisation: THW
+    FileName: TZ_mit_FGr_Infrastruktur
+  - Name: TZ-E
+    Größenordnung: Zug
+    Organisation: THW
+    FileName: TZ_mit_FGr_Elektroversorgung
+  - Name: TZ-TW
+    Größenordnung: Zug
+    Organisation: THW
+    FileName: TZ_mit_FGr_Trinkwasserversorgung
+  - Name: TZ-WP
+    Größenordnung: Zug
+    Organisation: THW
+    FileName: TZ_mit_FGr_Wasserschaden_Pumpen
+  - Name: TZ-WP
+    Größenordnung: Zug
+    Organisation: THW
+    Typ: A
+    FileName: TZ_mit_FGr_Wasserschaden_Pumpen_A
+  - Name: TZ-WP
+    Größenordnung: Zug
+    Organisation: THW
+    Typ: B
+    FileName: TZ_mit_FGr_Wasserschaden_Pumpen_B
+  - Name: TZ-WP
+    Größenordnung: Zug
+    Organisation: THW
+    Typ: C
+    FileName: TZ_mit_FGr_Wasserschaden_Pumpen_C
+  - Name: TZ-Öl
+    Größenordnung: Zug
+    Organisation: THW
+    FileName: TZ_mit_FGr_Ölschaden
+  - Name: TZ-Öl
+    Größenordnung: Zug
+    Organisation: THW
+    Typ: A
+    FileName: TZ_mit_FGr_Ölschaden_A
+  - Name: TZ-Öl
+    Größenordnung: Zug
+    Organisation: THW
+    Typ: B
+    FileName: TZ_mit_FGr_Ölschaden_B
+  - Name: TZ-Öl
+    Größenordnung: Zug
+    Organisation: THW
+    Typ: C
+    FileName: TZ_mit_FGr_Ölschaden_C

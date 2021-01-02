@@ -1,29 +1,30 @@
 # Alle Jinja2 Templates im Ordner symbols finden
-SOURCES = $(shell find symbols/ -name *.yml)
-TEMPLATE = $(shell find symbols/ -name *.j2t)
+YML_SOURCES = $(shell find symbols/ -name *.yml)
 
 # symbols/ prefix entfernen für die Ausgabedateien
-TARGET_PATHS = $(SOURCES:symbols/%=%)
+SVG_TARGET_PATHS = $(YML_SOURCES:symbols/%=%)
 
 # Zieldateien für SVG und PNG Ausgabe festlegen
-SVG_TARGETS = $(TARGET_PATHS:.yml=.svg)
-PNG_TARGETS = $(TARGET_PATHS:.yml=.png)
+SVG_TARGETS = $(SVG_TARGET_PATHS:.yml=.svg)
 
 SVG_FILES = $(addprefix build/svg/,$(SVG_TARGETS))
-PNG_1024_FILES = $(addprefix build/png/1024/,$(PNG_TARGETS))
-PNG_512_FILES = $(addprefix build/png/512/,$(PNG_TARGETS))
-PNG_256_FILES = $(addprefix build/png/256/,$(PNG_TARGETS))
 
 # Erstellt alle SVG Ausgabedateien
 svg: $(SVG_FILES)
 
-#build/svg/%.svg: symbols/%.j2 $(TEMPLATE)
-#	mkdir -p $(@D)
-#	j2 $< -o $@
-
-build/svg/%.svg: symbols/%.yml $(TEMPLATE)
+build/svg/%.svg: symbols/%.yml
 	mkdir -p $(@D)
-	j2 --customize ./scripts/j2-customize.py ./templates/Einheiten/Einheit.j2 $< -o $@
+	./scripts/j2build.py ./templates/ $< $@
+
+SVG_SOURCES = $(shell find build/svg -name *.svg)
+
+PNG_TARGET_PATHS = $(SVG_SOURCES:build/svg/%=%)
+
+PNG_TARGETS = $(PNG_TARGET_PATHS:.svg=.png)
+
+PNG_1024_FILES = $(addprefix build/png/1024/,$(PNG_TARGETS))
+PNG_512_FILES = $(addprefix build/png/512/,$(PNG_TARGETS))
+PNG_256_FILES = $(addprefix build/png/256/,$(PNG_TARGETS))
 
 # Erstellt alle PNG Ausgabedateien
 png: $(PNG_1024_FILES) $(PNG_512_FILES) $(PNG_256_FILES)
@@ -31,17 +32,17 @@ png: $(PNG_1024_FILES) $(PNG_512_FILES) $(PNG_256_FILES)
 build/png/1024/%.png: build/svg/%.svg
 	mkdir -p $(@D)
 	phantomjs rasterize.js $^ $@ 1024px*1024px 4
-	optipng $@
+	optipng -quiet $@
 
 build/png/512/%.png: build/svg/%.svg
 	mkdir -p $(@D)
 	phantomjs rasterize.js $^ $@ 512px*512px 2
-	optipng $@
+	optipng -quiet $@
 
 build/png/256/%.png: build/svg/%.svg
 	mkdir -p $(@D)
 	phantomjs rasterize.js $^ $@ 256px*256px 1
-	optipng $@
+	optipng -quiet $@
 
 clean:
 	rm -rf build
