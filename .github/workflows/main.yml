@@ -26,11 +26,11 @@ jobs:
 
       # Build svg, png, and package them
       - name: Build
-        run: make ci
+        run: make release
       
       # Upload artifacts
       - name: Upload output file
         uses: actions/upload-artifact@v1
         with:
-          name: Release
-          path: release.zip
+          name: Taktische-Zeichen
+          path: Taktische-Zeichen.zip
