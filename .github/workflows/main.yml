@@ -20,7 +20,8 @@ jobs:
       # Install tools
       - name: Install Phantomjs, Optipng, Python3 Pip, and J2cli
         run: |
-          sudo apt-get install -y phantomjs optipng python3-pip
+          sudo apt update
+          sudo apt install -y phantomjs optipng python3-pip
           sudo pip3 install j2cli
 
       # Build svg, png, and package them
