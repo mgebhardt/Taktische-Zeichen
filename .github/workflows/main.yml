@@ -1,4 +1,4 @@
-# This is a basic workflow to help you get started with Actions
+# Builds all Taktische Zeichen and safes them as build artifacts
 
 name: CI
 
@@ -35,19 +35,3 @@ jobs:
         with:
           name: Taktische-Zeichen
           path: build/
-      
-      # Create release on master and tag matches v*
-      - name: Create release
-        if: ${{ success() && github.ref == 'refs/heads/master' }}
-        uses: Roang-zero1/github-create-release-action@master
-        with:
-          version_regex: ^v[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Create GitHub release
-        if: ${{ success() && github.ref == 'refs/heads/master' }}
-        uses: Roang-zero1/github-upload-release-artifacts-action@master
-        with:
-          args: Taktische-Zeichen.zip
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
